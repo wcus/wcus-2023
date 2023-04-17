@@ -1,0 +1,73 @@
+/* Tickets form */
+#tix {
+	max-width: var(--wp--style--global--wide-size);
+
+	& .tix-ticket-form,
+	& .tix-tickets-list,
+	& .tix-order-summary {
+		border-spacing: 0;
+		border-collapse: collapse;
+		width: 100%;
+		max-width: var(--wp--style--global--content-size);
+		margin-left: auto;
+		margin-right: auto;
+
+		& thead th {
+			border-bottom: 1px solid var(--wp--preset--color--custom-grass-green);
+		}
+
+		& th,
+		& td {
+			padding: 0.5em;
+		}
+	}
+
+	& .tix-submit .tix-checkout-button {
+		text-transform: none;
+		letter-spacing: 0;
+		border-radius: 2px;
+		padding: 0.5rem 1rem;
+		background: var(--wp--preset--color--secondary);
+		color: var(--wp--preset--color--white);
+		font-size: 1.125rem;
+		font-family: var(--wp--preset--font-family--tilt-warp);
+
+		&:hover,
+		&:focus {
+			background: var(--wp--preset--color--contrast);
+		}
+	}
+}
+
+.tix-column-price,
+.tix-column-per-ticket,
+.tix-column-remaining,
+.tix-column-quantity,
+.tix-row-total {
+	text-align: right;
+}
+
+.tix-ticket-form,
+.tix-private-form,
+.tix-attendee-form,
+.tix-receipt-form {
+
+	& input[type="text"],
+	& input[type="email"],
+	& input[type="url"],
+	& textarea {
+		padding: 0.5em;
+	}
+
+	& select {
+		padding: 0.5em;
+	}
+
+	& tr > * {
+		padding-bottom: 1em;
+	}
+
+	& .tix-right {
+		padding-left: 2em;
+	}
+}

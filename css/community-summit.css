@@ -1,47 +1,6 @@
-/*
-Colors set by Global Styles:
---wp--preset--color--base: #fff;
---wp--preset--color--contrast: #24272a;
---wp--preset--color--primary: #9e1c67;
---wp--preset--color--secondary: #005549;
---wp--preset--color--tertiary: #4a1448;
---wp--preset--color--custom-bright-pink: #d60b7b;
---wp--preset--color--custom-medium-pink: #ed4e86;
---wp--preset--color--custom-light-pink: #ffadda;
---wp--preset--color--custom-grass-green: #5ab567;
---wp--preset--color--custom-bright-green: #c1cd42;
-
---wp--preset--font-family--tilt-warp: 'Tilt Warp';
---wp--preset--font-family--nunito: Nunito;
-*/
-
-body {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.wp-element-button:visited,
-.wp-block-button__link:visited {
-	color: var(--wp--preset--color--base);
-}
+@import "includes/base.css";
+@import "includes/tickets.css";
 
 .is-archive-header {
 	background-image: url(https://wc-us.org/wp-content/uploads/2023/04/wpcs-archive-header.svg);
-	background-repeat: no-repeat;
-	background-position: top right;
-	background-size: clamp(7.5rem, 25vw, 15rem);
-}
-
-.is-archive-header .wp-block-query-title span {
-	display: block;
-}
-
-/* Remove the top-level block gap between template sections. */
-.wp-site-blocks {
-	padding-top: 0 !important;
-	padding-bottom: 0 !important;
-}
-
-.wp-site-blocks > * + * {
-	margin-block-start: 0;
 }
