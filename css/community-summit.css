@@ -20,6 +20,11 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.wp-element-button:visited,
+.wp-block-button__link:visited {
+	color: var(--wp--preset--color--base);
+}
+
 .is-archive-header {
 	background-image: url(https://wc-us.org/wp-content/uploads/2023/04/wpcs-archive-header.svg);
 	background-repeat: no-repeat;
