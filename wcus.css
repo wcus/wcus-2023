@@ -52,7 +52,7 @@ header.wp-block-template-part .wp-block-navigation,
 		display: block;
 	}
 
-/* Remove when GB 15.5.1 & root layout fix is on prod. */
+/* Remove the top-level block gap between template sections. */
 
 .wp-site-blocks {
 	padding-top: 0 !important;
