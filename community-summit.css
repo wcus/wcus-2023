@@ -150,6 +150,15 @@ button:focus-visible,
 		padding-left: 2em;
 	}
 
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+.contact-form-dropdown__button:focus-visible {
+	outline-color: var(--wp--preset--color--secondary);
+}
+
 .is-archive-header {
 	background-image: url(https://wc-us.org/wp-content/uploads/2023/04/wpcs-archive-header.svg);
 }

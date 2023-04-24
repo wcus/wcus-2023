@@ -38,7 +38,6 @@ button:focus-visible,
 	outline-color: var(--wp--preset--color--secondary);
 }
 
-
 .wp-element-button:visited,
 .wp-block-button__link:visited {
 	color: var(--wp--preset--color--base);
