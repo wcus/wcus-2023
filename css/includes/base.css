@@ -63,3 +63,7 @@ button:focus-visible,
 .wp-site-blocks > * + * {
 	margin-block-start: 0;
 }
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item {
+	font-size: 1.13rem !important;
+}

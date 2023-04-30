@@ -65,6 +65,10 @@ button:focus-visible,
 	margin-block-start: 0;
 }
 
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item {
+	font-size: 1.13rem;
+}
+
 /* Tickets form */
 
 #tix {
