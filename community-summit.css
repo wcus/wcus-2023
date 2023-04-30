@@ -69,6 +69,63 @@ button:focus-visible,
 	font-size: 1.13rem;
 }
 
+#tix-attendees ul {
+		padding: 0;
+	}
+
+#tix-attendees ul li {
+			margin-bottom: 2rem;
+		}
+
+@media (min-width: 400px) {
+
+#tix-attendees ul {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 2rem;
+	}
+
+			#tix-attendees ul li {
+				margin-bottom: 0;
+			}
+		}
+
+@media (min-width: 600px) {
+
+#tix-attendees ul {
+			grid-template-columns: repeat(3, 1fr);
+	}
+		}
+
+@media (min-width: 960px) {
+
+#tix-attendees ul {
+			grid-template-columns: repeat(4, 1fr);
+	}
+		}
+
+#tix-attendees li {
+		margin: 0;
+		height: auto;
+		width: auto !important;
+		float: none;
+	}
+
+#tix-attendees .avatar {
+		margin: 0 auto 0.5rem;
+		height: auto;
+		width: auto;
+		float: none;
+		display: block;
+	}
+
+#tix-attendees .tix-field {
+		margin-left: 0;
+		font-size: inherit;
+		width: auto;
+		text-align: center;
+	}
+
 /* Tickets form */
 
 #tix {
