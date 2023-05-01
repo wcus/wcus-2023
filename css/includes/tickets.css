@@ -22,6 +22,66 @@
 		}
 	}
 
+	& .tix-attendee-form {
+		border-spacing: 0;
+		border-collapse: collapse;
+
+		& .tix-right {
+			vertical-align: middle;
+		}
+
+		& fieldset label {
+			display: inline-block;
+			margin-bottom: 0.5em;
+			font-size: 1rem;
+			vertical-align: middle;
+
+			& input {
+				margin-right: 0.5rem;
+			}
+		}
+
+		@media (max-width: 600px) {
+
+			&,
+			& tr,
+			& td,
+			& th {
+				display: block;
+				width: 100%;
+			}
+
+			& .tix-left {
+				padding-bottom: 0;
+				margin-bottom: 0.25rem;
+			}
+
+			& .tix-right {
+				padding-left: 0;
+			}
+
+			& input[type="text"],
+			& input[type="email"],
+			& input[type="url"],
+			& textarea, {
+				width: 100%;
+				box-sizing: border-box;
+			}
+
+			& fieldset {
+				margin-top: 0.5rem;
+			}
+
+			& fieldset label {
+				font-size: inherit;
+			}
+		}
+	}
+
+	& .tix-submit {
+		margin-bottom: var(--wp--preset--spacing--50);
+	}
+
 	& .tix-submit .tix-checkout-button {
 		text-transform: none;
 		letter-spacing: 0;
