@@ -1,16 +1,11 @@
 /* Tickets form */
 #tix {
-	max-width: var(--wp--style--global--wide-size);
 
 	& .tix-ticket-form,
 	& .tix-tickets-list,
 	& .tix-order-summary {
 		border-spacing: 0;
 		border-collapse: collapse;
-		width: 100%;
-		max-width: var(--wp--style--global--content-size);
-		margin-left: auto;
-		margin-right: auto;
 
 		& thead th {
 			border-bottom: 1px solid var(--wp--preset--color--custom-grass-green);
@@ -23,11 +18,34 @@
 	}
 
 	& .tix-attendee-form {
-		border-spacing: 0;
-		border-collapse: collapse;
+
+		&,
+		& tr,
+		& td,
+		& th {
+			display: block;
+			width: 100%;
+		}
+
+		& .tix-left {
+			padding-bottom: 0;
+			margin-bottom: 0.25rem;
+		}
 
 		& .tix-right {
-			vertical-align: middle;
+			padding-left: 0;
+		}
+
+		& input[type="text"],
+		& input[type="email"],
+		& input[type="url"],
+		& textarea, {
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		& fieldset {
+			margin-top: 0.5rem;
 		}
 
 		& fieldset label {
@@ -39,47 +57,16 @@
 			& input {
 				margin-right: 0.5rem;
 			}
-		}
 
-		@media (max-width: 600px) {
-
-			&,
-			& tr,
-			& td,
-			& th {
-				display: block;
-				width: 100%;
-			}
-
-			& .tix-left {
-				padding-bottom: 0;
-				margin-bottom: 0.25rem;
-			}
-
-			& .tix-right {
-				padding-left: 0;
-			}
-
-			& input[type="text"],
-			& input[type="email"],
-			& input[type="url"],
-			& textarea, {
-				width: 100%;
-				box-sizing: border-box;
-			}
-
-			& fieldset {
-				margin-top: 0.5rem;
-			}
-
-			& fieldset label {
+			@media (max-width: 600px) {
 				font-size: inherit;
 			}
 		}
 	}
 
 	& .tix-submit {
-		margin-bottom: var(--wp--preset--spacing--50);
+		float: none;
+		margin: var(--wp--preset--spacing--30) auto var(--wp--preset--spacing--50);
 	}
 
 	& .tix-submit .tix-checkout-button {

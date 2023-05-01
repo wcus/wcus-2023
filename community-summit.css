@@ -128,19 +128,11 @@ button:focus-visible,
 
 /* Tickets form */
 
-#tix {
-	max-width: var(--wp--style--global--wide-size);
-}
-
 #tix .tix-ticket-form,
 	#tix .tix-tickets-list,
 	#tix .tix-order-summary {
 		border-spacing: 0;
 		border-collapse: collapse;
-		width: 100%;
-		max-width: var(--wp--style--global--content-size);
-		margin-left: auto;
-		margin-right: auto;
 	}
 
 #tix .tix-ticket-form thead th, #tix .tix-tickets-list thead th, #tix .tix-order-summary thead th {
@@ -156,13 +148,34 @@ button:focus-visible,
 			padding: 0.5em;
 		}
 
-#tix .tix-attendee-form {
-		border-spacing: 0;
-		border-collapse: collapse;
-	}
+#tix .tix-attendee-form,
+		#tix .tix-attendee-form tr,
+		#tix .tix-attendee-form td,
+		#tix .tix-attendee-form th {
+			display: block;
+			width: 100%;
+		}
+
+#tix .tix-attendee-form .tix-left {
+			padding-bottom: 0;
+			margin-bottom: 0.25rem;
+		}
 
 #tix .tix-attendee-form .tix-right {
-			vertical-align: middle;
+			padding-left: 0;
+		}
+
+#tix .tix-attendee-form input[type="text"],
+		#tix .tix-attendee-form input[type="email"],
+		#tix .tix-attendee-form input[type="url"],
+		#tix .tix-attendee-form textarea,
+		#tix .tix-attendee-form {
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+#tix .tix-attendee-form fieldset {
+			margin-top: 0.5rem;
 		}
 
 #tix .tix-attendee-form fieldset label {
@@ -178,43 +191,14 @@ button:focus-visible,
 
 @media (max-width: 600px) {
 
-			#tix .tix-attendee-form,
-			#tix .tix-attendee-form tr,
-			#tix .tix-attendee-form td,
-			#tix .tix-attendee-form th {
-				display: block;
-				width: 100%;
-			}
-
-			#tix .tix-attendee-form .tix-left {
-				padding-bottom: 0;
-				margin-bottom: 0.25rem;
-			}
-
-			#tix .tix-attendee-form .tix-right {
-				padding-left: 0;
-			}
-
-			#tix .tix-attendee-form input[type="text"],
-			#tix .tix-attendee-form input[type="email"],
-			#tix .tix-attendee-form input[type="url"],
-			#tix .tix-attendee-form textarea,
-			#tix .tix-attendee-form {
-				width: 100%;
-				box-sizing: border-box;
-			}
-
-			#tix .tix-attendee-form fieldset {
-				margin-top: 0.5rem;
-			}
-
-			#tix .tix-attendee-form fieldset label {
+#tix .tix-attendee-form fieldset label {
 				font-size: inherit;
-			}
 		}
+			}
 
 #tix .tix-submit {
-		margin-bottom: var(--wp--preset--spacing--50);
+		float: none;
+		margin: var(--wp--preset--spacing--30) auto var(--wp--preset--spacing--50);
 	}
 
 #tix .tix-submit .tix-checkout-button {
