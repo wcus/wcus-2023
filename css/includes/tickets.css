@@ -3,6 +3,14 @@
 
 	& .tix-ticket-form,
 	& .tix-tickets-list,
+	& .tix-order-summary,
+	& .tix-submit,
+	& .tix-attendee-form {
+		width: 100%;
+	}
+
+	& .tix-ticket-form,
+	& .tix-tickets-list,
 	& .tix-order-summary {
 		border-spacing: 0;
 		border-collapse: collapse;

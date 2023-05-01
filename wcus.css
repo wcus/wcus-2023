@@ -130,6 +130,14 @@ button:focus-visible,
 
 #tix .tix-ticket-form,
 	#tix .tix-tickets-list,
+	#tix .tix-order-summary,
+	#tix .tix-submit,
+	#tix .tix-attendee-form {
+		width: 100%;
+	}
+
+#tix .tix-ticket-form,
+	#tix .tix-tickets-list,
 	#tix .tix-order-summary {
 		border-spacing: 0;
 		border-collapse: collapse;
