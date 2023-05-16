@@ -14,7 +14,6 @@
     "postcss-custom-properties": "13.1.5",
     "postcss-import": "15.1.0",
     "postcss-nesting": "11.2.2",
-    "postcss-short": "5.0.0",
     "stylelint": "^14.2"
   }
 }
