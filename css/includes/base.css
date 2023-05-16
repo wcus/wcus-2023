@@ -88,3 +88,12 @@ button:focus-visible,
 	/* 50% opacity light pink */
 	background-color: #fed7ed;
 }
+
+/*
+ * Fix the spacing inside group blocks on contact forms.
+ * We can't set the Block Spacing value on the blocks themselves because it
+ * breaks the form validation.
+ */
+.wp-block-jetpack-contact-form .wp-block-group > * + * {
+	margin-block-start: 0.5em;
+}
