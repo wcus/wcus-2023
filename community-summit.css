@@ -97,6 +97,52 @@ button:focus-visible,
 	margin-block-start: 0.5em;
 }
 
+/*
+ * Fix spacing in post-template grid. We can't control this in the UI, so we'll set it here.
+ *
+ * Add responsive handling:
+ *  - Drop 4 cols to 2 at 1100px.
+ *  - Drop 3 cols to 2 at 900px.
+ *  - Drop all to one col at 480px.
+ */
+
+.wp-block-post-template.is-flex-container.is-flex-container {
+	gap: 2.5rem;
+}
+
+.wp-block-post-template.is-flex-container.is-flex-container.columns-2 > li {
+		width: calc(50% - 2.5rem / 2);
+	}
+
+.wp-block-post-template.is-flex-container.is-flex-container.columns-3 > li {
+		width: calc(33.3333% - 5rem / 3);
+	}
+
+@media (max-width: 900px) {
+
+.wp-block-post-template.is-flex-container.is-flex-container.columns-3 > li {
+			width: calc(50% - 2.5rem / 2);
+	}
+		}
+
+.wp-block-post-template.is-flex-container.is-flex-container.columns-4 > li {
+		width: calc(25% - 7.5rem / 4);
+	}
+
+@media (max-width: 1100px) {
+
+.wp-block-post-template.is-flex-container.is-flex-container.columns-4 > li {
+			width: calc(50% - 2.5rem / 2);
+	}
+		}
+
+@media (max-width: 480px) {
+
+		.wp-block-post-template.is-flex-container.is-flex-container[class*="columns"] > li {
+			width: 100%;
+		}
+	}
+
 #tix-attendees ul {
 		padding: 0;
 	}
@@ -350,6 +396,66 @@ button:focus-visible,
 
 .tix-ticket-form .tix-right, .tix-private-form .tix-right, .tix-attendee-form .tix-right, .tix-receipt-form .tix-right {
 		padding-left: 2em;
+	}
+
+body.page-slug-organizers .wp-block-post-template.is-flex-container {
+		justify-content: center;
+	}
+
+body.page-slug-organizers .wp-block-wordcamp-avatar {
+		max-width: 100%;
+		height: auto !important;
+		border-radius: 0 0 25%;
+		overflow: hidden;
+		border-style: solid;
+		border-width: 0 0 10px 0;
+	}
+
+body.page-slug-organizers .wp-block-wordcamp-avatar img {
+			vertical-align: middle;
+		}
+
+body.page-slug-organizers .wp-block-post:nth-of-type(5n) .wp-block-wordcamp-avatar {
+		border-color: var(--wp--preset--color--custom-medium-pink);
+	}
+
+body.page-slug-organizers .wp-block-post:nth-of-type(5n + 1) .wp-block-wordcamp-avatar {
+		border-color: var(--wp--preset--color--custom-grass-green);
+	}
+
+body.page-slug-organizers .wp-block-post:nth-of-type(5n + 2) .wp-block-wordcamp-avatar {
+		border-color: var(--wp--preset--color--custom-bright-pink);
+	}
+
+body.page-slug-organizers .wp-block-post:nth-of-type(5n + 3) .wp-block-wordcamp-avatar {
+		border-color: var(--wp--preset--color--custom-bright-green);
+	}
+
+body.page-slug-organizers .wp-block-post:nth-of-type(5n + 4) .wp-block-wordcamp-avatar {
+		border-color: var(--wp--preset--color--custom-light-pink);
+	}
+
+body.page-slug-organizers .wp-block-read-more {
+		text-decoration: underline;
+	}
+
+body.page-slug-organizers .wp-block-read-more:hover,
+		body.page-slug-organizers .wp-block-read-more:active {
+			text-decoration: none;
+		}
+
+body.page-slug-organizers .wp-block-read-more:focus {
+			-webkit-text-decoration: underline dashed;
+			        text-decoration: underline dashed;
+		}
+
+body.page-slug-organizers .wp-block-read-more .screen-reader-text,
+		:is(body.page-slug-organizers .wp-block-read-more) ~ * {
+			display: none;
+		}
+
+body.single-wcb_organizer .wp-block-post-content .wp-block-read-more {
+		display: none;
 	}
 
 a:focus-visible,

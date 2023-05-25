@@ -1,6 +1,7 @@
 @import "includes/base.css";
 @import "includes/attendees.css";
 @import "includes/tickets.css";
+@import "includes/organizers.css";
 
 a:focus-visible,
 input:focus-visible,
