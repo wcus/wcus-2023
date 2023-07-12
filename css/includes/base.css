@@ -98,6 +98,10 @@ button:focus-visible,
 	margin-block-start: 0.5em;
 }
 
+.is-justify-center > .wp-block-post-template {
+	justify-content: center;
+}
+
 /*
  * Fix spacing in post-template grid. We can't control this in the UI, so we'll set it here.
  *
@@ -106,7 +110,7 @@ button:focus-visible,
  *  - Drop 3 cols to 2 at 900px.
  *  - Drop all to one col at 480px.
  */
-.wp-block-post-template.is-flex-container.is-flex-container {
+.wp-block-post-template.is-layout-grid.is-layout-grid {
 	gap: 2.5rem;
 
 	&.columns-2 > li {
