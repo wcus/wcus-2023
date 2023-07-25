@@ -1,5 +1,6 @@
 body.page-slug-organizers,
-body.page-slug-speakers {
+body.page-slug-speakers,
+.wcus-speaker-grid {
 
 	& .wp-block-post-template.is-flex-container {
 		justify-content: center;
