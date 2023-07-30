@@ -1,0 +1,197 @@
+/* Specificity hack */
+
+.wordcamp-schedule:not(#hack) {
+
+	& a:where(:not(.wp-element-button)) {
+		color: var(--wp--preset--color--primary);
+	}
+
+	& .wordcamp-schedule__day {
+		background-color: #feeaf6;
+	}
+
+	& .wordcamp-schedule__session,
+	& .wordcamp-schedule__time-slot-header,
+	& .wordcamp-schedule__column-header {
+		box-shadow: 0 0 1px 1px var(--wp--preset--color--custom-light-pink);
+	}
+
+	& .wordcamp-schedule__session,
+	& .wordcamp-schedule__time-slot-header {
+		padding: 1.5rem;
+	}
+
+	& .wordcamp-schedule__column-header {
+		position: sticky;
+		top: var(--wp-admin--admin-bar--height, 0);
+		margin: 0;
+		font-size: 1em;
+		font-family: var(--wp--preset--font-family--dm-sans);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		background-color: #ffdbef;
+	}
+
+	& .wordcamp-schedule__time-slot-header {
+		font-size: 1em;
+		font-family: var(--wp--preset--font-family--nunito);
+		font-weight: 400;
+		text-align: revert;
+	}
+
+	& .wordcamp-schedule__session {
+		font-size: inherit;
+		position: relative;
+
+		& > * {
+			margin: 0;
+
+			& + * {
+				margin-top: 0.75rem;
+			}
+		}
+
+		&.is-spanning-some-tracks {
+			text-align: inherit;
+		}
+
+		&:where(.is-type-session):hover,
+		&:where(.is-type-session):focus-within {
+			background: #fff5fb;
+		}
+
+		& .wcb-session-favourite-icon {
+			font-size: 16px;
+
+			& a {
+				color: var(--wp--preset--color--custom-light-pink);
+				-webkit-text-stroke: 1px var(--wp--preset--color--primary);
+			}
+		}
+
+		&.wcb-favourite-session {
+			background: #eff2d0;
+
+			& a:where(:not(.wp-element-button)) {
+				color: var(--wp--preset--color--contrast);
+			}
+
+			& .wcb-session-favourite-icon a {
+				color: var(--wp--preset--color--custom-grass-green);
+				-webkit-text-stroke: 1px var(--wp--preset--color--contrast);
+			}
+		}
+	}
+
+	& .wordcamp-schedule__session-title {
+		display: revert;
+		padding-inline-end: 26px;
+		font-family: var(--wp--preset--font-family--nunito);
+		font-size: var(--wp--preset--font-size--large);
+		line-height: 1.25;
+		font-weight: 600;
+
+		& .wcb-session-favourite-icon {
+			position: absolute;
+			inset: 1.5rem 1.5rem auto auto;
+		}
+
+		& > a {
+			display: inline-block;
+
+			&::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				z-index: 0;
+			}
+		}
+	}
+
+	& .has-category-lightning .wordcamp-schedule__session-title {
+		font-size: 1.25rem;
+	}
+
+	& .wordcamp-schedule__session-speakers a {
+		position: relative;
+		z-index: 1;
+	}
+
+	& .wordcamp-schedule__session-category {
+		color: inherit;
+		font-style: normal;
+	}
+
+	@media (max-width: 1000px) {
+
+		& .wordcamp-schedule__day {
+			display: revert;
+			border: 1px solid var(--wp--preset--color--custom-light-pink);
+			border-bottom: none;
+		}
+
+		& .wordcamp-schedule__column-header {
+			display: none;
+		}
+
+		& .wordcamp-schedule__session,
+		& .wordcamp-schedule__time-slot-header {
+			box-shadow: none;
+			border-bottom: 1px solid var(--wp--preset--color--custom-light-pink);
+		}
+
+		& .wordcamp-schedule__time-slot-header {
+			position: sticky;
+			top: var(--wp-admin--admin-bar--height, 0);
+			z-index: 10;
+			padding-block: 0.5rem;
+			font-size: 1em;
+			font-family: var(--wp--preset--font-family--dm-sans);
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			background-color: #ffdbef;
+		}
+
+		& .wordcamp-schedule__session::before {
+			display: inline-block;
+			margin-block-end: 4px;
+			font-size: 1em;
+			font-family: var(--wp--preset--font-family--dm-sans);
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+		}
+
+		& .has-track-1-woodrow-wilson::before {
+			content: "Woodrow Wilson";
+		}
+
+		& .has-track-2-annapolis::before {
+			content: "Annapolis";
+		}
+
+		& .has-track-3-cherry-blossom::before {
+			content: "Cherry Blossom";
+		}
+
+		& .is-spanning-all-tracks::before {
+			content: "All tracks";
+		}
+	}
+
+	@media (max-width: 600px) {
+
+		& .wordcamp-schedule__time-slot-header {
+			top: 0;
+		}
+	}
+
+	@media (max-width: 549px) {
+
+		& .wordcamp-schedule__time-slot-header {
+			margin-top: 0;
+		}
+	}
+}
