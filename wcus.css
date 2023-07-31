@@ -462,6 +462,10 @@ body.single-wcb_speaker .wp-block-wordcamp-avatar img {
 
 /* Specificity hack */
 
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__date {
+		display: none;
+	}
+
 .wordcamp-schedule:not(#hack) a:where(:not(.wp-element-button)) {
 		color: var(--wp--preset--color--primary);
 	}
@@ -652,5 +656,9 @@ body.single-wcb_speaker .wp-block-wordcamp-avatar img {
 
 		.wordcamp-schedule:not(#hack) .wordcamp-schedule__time-slot-header {
 			margin-top: 0;
+		}
+
+		.wordcamp-schedule:not(#hack) .wordcamp-schedule__session-tracks {
+			display: none;
 		}
 	}

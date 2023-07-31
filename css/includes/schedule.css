@@ -2,6 +2,10 @@
 
 .wordcamp-schedule:not(#hack) {
 
+	& .wordcamp-schedule__date {
+		display: none;
+	}
+
 	& a:where(:not(.wp-element-button)) {
 		color: var(--wp--preset--color--primary);
 	}
@@ -192,6 +196,10 @@
 
 		& .wordcamp-schedule__time-slot-header {
 			margin-top: 0;
+		}
+
+		& .wordcamp-schedule__session-tracks {
+			display: none;
 		}
 	}
 }
