@@ -158,6 +158,10 @@
 			background-color: #ffdbef;
 		}
 
+		& .has-category-lightning .wordcamp-schedule__session-title {
+			font-size: var(--wp--preset--font-size--large);
+		}
+
 		& .wordcamp-schedule__session::before {
 			display: inline-block;
 			margin-block-end: 4px;

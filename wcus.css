@@ -618,6 +618,10 @@ body.single-wcb_speaker .wp-block-wordcamp-avatar img {
 			background-color: #ffdbef;
 		}
 
+		.wordcamp-schedule:not(#hack) .has-category-lightning .wordcamp-schedule__session-title {
+			font-size: var(--wp--preset--font-size--large);
+		}
+
 		.wordcamp-schedule:not(#hack) .wordcamp-schedule__session::before {
 			display: inline-block;
 			margin-block-end: 4px;
