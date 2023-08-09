@@ -460,6 +460,213 @@ body.single-wcb_speaker .wp-block-wordcamp-avatar img {
 			vertical-align: middle;
 		}
 
+/* Specificity hack */
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__date {
+		display: none;
+	}
+
+.wordcamp-schedule:not(#hack) a:where(:not(.wp-element-button)) {
+		color: var(--wp--preset--color--primary);
+	}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__day {
+		background-color: #feeaf6;
+	}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session,
+	.wordcamp-schedule:not(#hack) .wordcamp-schedule__time-slot-header,
+	.wordcamp-schedule:not(#hack) .wordcamp-schedule__column-header {
+		box-shadow: 0 0 1px 1px var(--wp--preset--color--custom-light-pink);
+	}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session,
+	.wordcamp-schedule:not(#hack) .wordcamp-schedule__time-slot-header {
+		padding: 1.5rem;
+	}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__column-header {
+		position: sticky;
+		top: var(--wp-admin--admin-bar--height, 0);
+		margin: 0;
+		font-size: 1em;
+		font-family: var(--wp--preset--font-family--dm-sans);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		background-color: #ffdbef;
+	}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__time-slot-header {
+		font-size: 1em;
+		font-family: var(--wp--preset--font-family--nunito);
+		font-weight: 400;
+		text-align: revert;
+	}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session {
+		font-size: inherit;
+		position: relative;
+	}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session > * {
+			margin: 0;
+		}
+
+:is(.wordcamp-schedule:not(#hack) .wordcamp-schedule__session > *) + * {
+				margin-top: 0.75rem;
+			}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session.is-spanning-some-tracks {
+			text-align: inherit;
+		}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session:where(.is-type-session):hover,
+		.wordcamp-schedule:not(#hack) .wordcamp-schedule__session:where(.is-type-session):focus-within {
+			background: #fff5fb;
+		}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session .wcb-session-favourite-icon {
+			font-size: 16px;
+		}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session .wcb-session-favourite-icon a {
+				color: var(--wp--preset--color--custom-light-pink);
+				-webkit-text-stroke: 1px var(--wp--preset--color--primary);
+			}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session.wcb-favourite-session {
+			background: #eff2d0;
+		}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session.wcb-favourite-session a:where(:not(.wp-element-button)) {
+				color: var(--wp--preset--color--contrast);
+			}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session.wcb-favourite-session .wcb-session-favourite-icon a {
+				color: var(--wp--preset--color--custom-grass-green);
+				-webkit-text-stroke: 1px var(--wp--preset--color--contrast);
+			}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session-title {
+		display: revert;
+		padding-inline-end: 26px;
+		font-family: var(--wp--preset--font-family--nunito);
+		font-size: var(--wp--preset--font-size--large);
+		line-height: 1.25;
+		font-weight: 600;
+	}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session-title .wcb-session-favourite-icon {
+			position: absolute;
+			inset: 1.5rem 1.5rem auto auto;
+		}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session-title > a {
+			display: inline-block;
+		}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session-title > a::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				z-index: 0;
+			}
+
+.wordcamp-schedule:not(#hack) .has-category-lightning .wordcamp-schedule__session-title {
+		font-size: 1.25rem;
+	}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session-speakers a {
+		position: relative;
+		z-index: 1;
+	}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session-category {
+		color: inherit;
+		font-style: normal;
+	}
+
+@media (max-width: 1000px) {
+
+		.wordcamp-schedule:not(#hack) .wordcamp-schedule__day {
+			display: revert;
+			border: 1px solid var(--wp--preset--color--custom-light-pink);
+			border-bottom: none;
+		}
+
+		.wordcamp-schedule:not(#hack) .wordcamp-schedule__column-header {
+			display: none;
+		}
+
+		.wordcamp-schedule:not(#hack) .wordcamp-schedule__session,
+		.wordcamp-schedule:not(#hack) .wordcamp-schedule__time-slot-header {
+			box-shadow: none;
+			border-bottom: 1px solid var(--wp--preset--color--custom-light-pink);
+		}
+
+		.wordcamp-schedule:not(#hack) .wordcamp-schedule__time-slot-header {
+			position: sticky;
+			top: var(--wp-admin--admin-bar--height, 0);
+			z-index: 10;
+			padding-block: 0.5rem;
+			font-size: 1em;
+			font-family: var(--wp--preset--font-family--dm-sans);
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			background-color: #ffdbef;
+		}
+
+		.wordcamp-schedule:not(#hack) .has-category-lightning .wordcamp-schedule__session-title {
+			font-size: var(--wp--preset--font-size--large);
+		}
+
+		.wordcamp-schedule:not(#hack) .wordcamp-schedule__session::before {
+			display: inline-block;
+			margin-block-end: 4px;
+			font-size: 1em;
+			font-family: var(--wp--preset--font-family--dm-sans);
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+		}
+
+		.wordcamp-schedule:not(#hack) .has-track-1-woodrow-wilson::before {
+			content: "Woodrow Wilson";
+		}
+
+		.wordcamp-schedule:not(#hack) .has-track-2-annapolis::before {
+			content: "Annapolis";
+		}
+
+		.wordcamp-schedule:not(#hack) .has-track-3-cherry-blossom::before {
+			content: "Cherry Blossom";
+		}
+
+		.wordcamp-schedule:not(#hack) .is-spanning-all-tracks::before {
+			content: "All tracks";
+		}
+	}
+
+@media (max-width: 600px) {
+
+		.wordcamp-schedule:not(#hack) .wordcamp-schedule__time-slot-header {
+			top: 0;
+		}
+	}
+
+@media (max-width: 549px) {
+
+		.wordcamp-schedule:not(#hack) .wordcamp-schedule__time-slot-header {
+			margin-top: 0;
+		}
+
+		.wordcamp-schedule:not(#hack) .wordcamp-schedule__session-tracks {
+			display: none;
+		}
+	}
+
 a:focus-visible,
 input:focus-visible,
 select:focus-visible,
@@ -472,3 +679,86 @@ button:focus-visible,
 .is-archive-header {
 	background-image: url(https://wc-us.org/wp-content/uploads/2023/04/wpcs-archive-header.svg);
 }
+
+/* Specificity hack */
+
+.wordcamp-schedule:not(#hack) a:where(:not(.wp-element-button)) {
+		color: var(--wp--preset--color--contrast);
+	}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__day {
+		background-color: #c8eacd;
+	}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session,
+	.wordcamp-schedule:not(#hack) .wordcamp-schedule__time-slot-header,
+	.wordcamp-schedule:not(#hack) .wordcamp-schedule__column-header {
+		box-shadow: 0 0 1px 1px var(--wp--preset--color--custom-grass-green);
+	}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__column-header {
+		background-color: #b5e3bc;
+	}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session:where(.is-type-session):hover,
+		.wordcamp-schedule:not(#hack) .wordcamp-schedule__session:where(.is-type-session):focus-within {
+			background: #d6f5db;
+		}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session .wcb-session-favourite-icon a {
+				color: var(--wp--preset--color--custom-grass-green);
+				-webkit-text-stroke: 1px var(--wp--preset--color--contrast);
+			}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session.wcb-favourite-session {
+			background: #eff2d0;
+		}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session.wcb-favourite-session a:where(:not(.wp-element-button)) {
+				color: var(--wp--preset--color--contrast);
+			}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session.wcb-favourite-session .wcb-session-favourite-icon a {
+				color: var(--wp--preset--color--custom-bright-green);
+				-webkit-text-stroke: 1px var(--wp--preset--color--contrast);
+			}
+
+.wordcamp-schedule:not(#hack) .wordcamp-schedule__session-title {
+		font-size: 1.25rem;
+	}
+
+@media (max-width: 1000px) {
+
+		.wordcamp-schedule:not(#hack) .wordcamp-schedule__day {
+			border-color: var(--wp--preset--color--custom-grass-green);
+		}
+
+		.wordcamp-schedule:not(#hack) .wordcamp-schedule__session,
+		.wordcamp-schedule:not(#hack) .wordcamp-schedule__time-slot-header {
+			border-bottom-color: var(--wp--preset--color--custom-grass-green);
+		}
+
+		.wordcamp-schedule:not(#hack) .wordcamp-schedule__time-slot-header {
+			background-color: #c8eacd;
+		}
+
+		.wordcamp-schedule:not(#hack) .has-category-lightning .wordcamp-schedule__session-title {
+			font-size: 1.25rem;
+		}
+
+		.wordcamp-schedule:not(#hack) .has-track-baltimore::before {
+			content: "Baltimore 3/4/5";
+		}
+
+		.wordcamp-schedule:not(#hack) .has-track-wwb::before {
+			content: "Woodrow Wilson B";
+		}
+
+		.wordcamp-schedule:not(#hack) .has-track-wwc::before {
+			content: "Woodrow Wilson C";
+		}
+
+		.wordcamp-schedule:not(#hack) .has-track-wwd::before {
+			content: "Woodrow Wilson D";
+		}
+	}

@@ -2,6 +2,7 @@
 @import "includes/attendees.css";
 @import "includes/tickets.css";
 @import "includes/people.css";
+@import "includes/schedule.css";
 
 a:focus-visible,
 input:focus-visible,
@@ -14,4 +15,96 @@ button:focus-visible,
 
 .is-archive-header {
 	background-image: url(https://wc-us.org/wp-content/uploads/2023/04/wpcs-archive-header.svg);
+}
+
+/* Specificity hack */
+
+.wordcamp-schedule:not(#hack) {
+
+	& a:where(:not(.wp-element-button)) {
+		color: var(--wp--preset--color--contrast);
+	}
+
+	& .wordcamp-schedule__day {
+		background-color: #c8eacd;
+	}
+
+	& .wordcamp-schedule__session,
+	& .wordcamp-schedule__time-slot-header,
+	& .wordcamp-schedule__column-header {
+		box-shadow: 0 0 1px 1px var(--wp--preset--color--custom-grass-green);
+	}
+
+	& .wordcamp-schedule__column-header {
+		background-color: #b5e3bc;
+	}
+
+	& .wordcamp-schedule__session {
+
+		&:where(.is-type-session):hover,
+		&:where(.is-type-session):focus-within {
+			background: #d6f5db;
+		}
+
+		& .wcb-session-favourite-icon {
+
+			& a {
+				color: var(--wp--preset--color--custom-grass-green);
+				-webkit-text-stroke: 1px var(--wp--preset--color--contrast);
+			}
+		}
+
+		&.wcb-favourite-session {
+			background: #eff2d0;
+
+			& a:where(:not(.wp-element-button)) {
+				color: var(--wp--preset--color--contrast);
+			}
+
+			& .wcb-session-favourite-icon a {
+				color: var(--wp--preset--color--custom-bright-green);
+				-webkit-text-stroke: 1px var(--wp--preset--color--contrast);
+			}
+		}
+	}
+
+	& .wordcamp-schedule__session-title {
+		font-size: 1.25rem;
+	}
+
+	@media (max-width: 1000px) {
+
+		& .wordcamp-schedule__day {
+			border-color: var(--wp--preset--color--custom-grass-green);
+		}
+
+		& .wordcamp-schedule__session,
+		& .wordcamp-schedule__time-slot-header {
+			border-bottom-color: var(--wp--preset--color--custom-grass-green);
+		}
+
+		& .wordcamp-schedule__time-slot-header {
+			background-color: #c8eacd;
+		}
+
+		& .has-category-lightning .wordcamp-schedule__session-title {
+			font-size: 1.25rem;
+		}
+
+		& .has-track-baltimore::before {
+			content: "Baltimore 3/4/5";
+		}
+
+		& .has-track-wwb::before {
+			content: "Woodrow Wilson B";
+		}
+
+		& .has-track-wwc::before {
+			content: "Woodrow Wilson C";
+		}
+
+		& .has-track-wwd::before {
+			content: "Woodrow Wilson D";
+		}
+	}
 }
