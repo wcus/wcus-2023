@@ -185,7 +185,7 @@
 		}
 
 		& .is-spanning-all-tracks::before {
-			content: "All tracks";
+			content: "All tracks" !important;
 		}
 	}
 

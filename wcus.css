@@ -645,7 +645,7 @@ body.single-wcb_speaker .wp-block-wordcamp-avatar img {
 		}
 
 		.wordcamp-schedule:not(#hack) .is-spanning-all-tracks::before {
-			content: "All tracks";
+			content: "All tracks" !important;
 		}
 	}
 
