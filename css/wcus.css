@@ -3,3 +3,66 @@
 @import "includes/tickets.css";
 @import "includes/people.css";
 @import "includes/schedule.css";
+
+.is-section-what-to-expect .wp-block-column {
+
+	& a::before {
+		display: block;
+		content: "";
+		height: 100px;
+		width: 100px;
+		margin-bottom: 0.3em;
+		background-size: 100%;
+		background-position: top left;
+		background-repeat: no-repeat;
+	}
+
+	&:nth-child(1) a::before {
+		background-image: url(https://wc-us.org/wp-content/uploads/2023/08/news-wc-basics.svg?v=2);
+	}
+
+	&:nth-child(2) a::before {
+		background-image: url(https://wc-us.org/wp-content/uploads/2023/08/news-travel-venue.svg?v=2);
+	}
+
+	&:nth-child(3) a::before {
+		background-image: url(https://wc-us.org/wp-content/uploads/2023/08/news-things-to-do.svg?v=2);
+	}
+
+	@media (max-width: 1039px) {
+
+		& .wp-block-button {
+			font-size: 1.5rem !important;
+		}
+	}
+
+	@media (max-width: 869px) {
+
+		& .wp-block-button {
+			font-size: 1.333rem !important;
+		}
+	}
+
+	@media (max-width: 781px) {
+
+		& a {
+			display: flex;
+			align-items: center;
+			gap: var(--wp--preset--spacing--40);
+
+			&::before {
+				height: 80px;
+				width: 80px;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	@media (max-width: 399px) {
+
+		& a::before {
+			height: 50px;
+			width: 50px;
+		}
+	}
+}
