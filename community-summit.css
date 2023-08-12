@@ -54,6 +54,21 @@ button:focus-visible,
 	display: block;
 }
 
+/* Update page headers on small screens. */
+
+@media (max-width: 599px) {
+
+	main > .wp-block-cover:first-child {
+		min-height: 0;
+		padding: var(--wp--preset--spacing--60) 0;
+		background-color: #feeaf6;
+	}
+
+		main > .wp-block-cover:first-child img {
+			display: none;
+		}
+}
+
 /* Remove the top-level block gap between template sections. */
 
 .wp-site-blocks {
@@ -678,6 +693,13 @@ button:focus-visible,
 
 .is-archive-header {
 	background-image: url(https://wc-us.org/wp-content/uploads/2023/04/wpcs-archive-header.svg);
+}
+
+@media (max-width: 599px) {
+
+	main > .wp-block-cover:first-child {
+		background-color: #eff2d0;
+	}
 }
 
 /* Specificity hack */

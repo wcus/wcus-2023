@@ -17,6 +17,13 @@ button:focus-visible,
 	background-image: url(https://wc-us.org/wp-content/uploads/2023/04/wpcs-archive-header.svg);
 }
 
+@media (max-width: 599px) {
+
+	main > .wp-block-cover:first-child {
+		background-color: #eff2d0;
+	}
+}
+
 /* Specificity hack */
 
 .wordcamp-schedule:not(#hack) {
