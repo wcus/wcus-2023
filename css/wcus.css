@@ -66,3 +66,61 @@
 		}
 	}
 }
+
+.wordcamp-live-schedule {
+
+	& a:where(:not(.wp-element-button)) {
+		color: var(--wp--preset--color--primary);
+	}
+
+	& .wordcamp-live-schedule__session {
+		margin-top: -1px;
+		margin-bottom: 0;
+		border-width: 1px;
+		border-style: solid;
+		border-color: var(--wp--preset--color--custom-light-pink);
+		background-color: #feeaf6;
+
+		&:last-child {
+			border-bottom-width: 1px;
+		}
+	}
+
+	& .wordcamp-live-schedule__session-track {
+		padding: 1.5rem;
+		font-size: 1em;
+		font-family: var(--wp--preset--font-family--dm-sans);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		background-color: #ffdbef;
+		border-width: 0 1px 0 0;
+		border-style: solid;
+		border-color: inherit;
+	}
+
+	& .wordcamp-live-schedule__session-details {
+		margin-left: 0;
+		padding: 1.5rem;
+	}
+
+	& .wordcamp-live-schedule__session-title {
+		margin-bottom: 0.25em;
+		font-family: var(--wp--preset--font-family--nunito);
+		font-size: var(--wp--preset--font-size--large);
+		line-height: 1.25;
+		font-weight: 600;
+	}
+
+	@media (max-width: 599px) {
+
+		& .wordcamp-live-schedule__session {
+			flex-direction: column;
+		}
+
+		& .wordcamp-live-schedule__session-track {
+			border-width: 0 0 1px;
+			width: auto;
+		}
+	}
+}
